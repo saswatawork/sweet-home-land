@@ -1,6 +1,7 @@
 const cacheName = "1.0.1";
 
 const cacheAssets = [
+    "./",
   //   "index.html",
   //   "assets/css/normalize.css",
   //   "assets/css/style.css",
