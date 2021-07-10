@@ -1,7 +1,6 @@
 const cacheName = "1.0.2";
 
-const cacheAssets = [
-    "./",
+// const cacheAssets = [
   //   "index.html",
   //   "assets/css/normalize.css",
   //   "assets/css/style.css",
@@ -25,23 +24,23 @@ const cacheAssets = [
   //   "assets/image/projects/5.jpg",
   //   "assets/image/projects/6.jpg",
   //   "assets/image/logo.png",
-  "assets/video/banner.mp4",
-];
+//   "assets/video/banner.mp4",
+// ];
 
 //install event
 self.addEventListener("install", (e) => {
   console.log("Service worker: Installed");
 
-  e.waitUntil(
-    caches
-      .open(cacheName)
-      .then((cache) => {
-        console.log("Service worker: Caching files");
-        cache.addAll(cacheAssets);
-      })
-      .catch((err) => console.warn(`Service worker error: ${err}`))
-      .then(() => self.skipWaiting())
-  );
+//   e.waitUntil(
+//     caches
+//       .open(cacheName)
+//       .then((cache) => {
+//         console.log("Service worker: Caching files");
+//         cache.addAll(cacheAssets);
+//       })
+//       .catch((err) => console.warn(`Service worker error: ${err}`))
+//       .then(() => self.skipWaiting())
+//   );
 });
 
 //activate event

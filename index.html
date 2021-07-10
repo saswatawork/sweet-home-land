@@ -7,7 +7,16 @@
     <title>CSS-GRID : Sweet Home Land</title>
     <link rel="stylesheet" href="./assets/css/normalize.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <script src="./assets/js/main.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("./serviceWorker.js")
+            .then(() => console.log("Service worker Registered"))
+            .catch((err) => console.warn(`Service worker error: ${err}`));
+        });
+      }
+    </script>
   </head>
   <body>
     <!--navigation-->
@@ -57,7 +66,7 @@
         <h1>Lorem Ipsum is simply dummy</h1>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. 
+          industry.
         </p>
       </div>
     </section>
