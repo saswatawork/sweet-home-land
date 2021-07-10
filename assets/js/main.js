@@ -1,7 +1,7 @@
 const baseUrl =
   location.hostname === "localhost" || location.hostname === "127.0.0.1"
     ? "./../../"
-    : "https://github.com/saswatawork/sweet-home-land";
+    : "https://saswatawork.github.io/sweet-home-land";
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
